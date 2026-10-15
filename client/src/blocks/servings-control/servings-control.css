@@ -1,0 +1,43 @@
+.servings-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--color-surface-alt);
+}
+
+.servings-control__button {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-surface);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-s);
+  transition:
+    transform 0.15s,
+    background-color 0.2s;
+}
+
+.servings-control__button:hover:not(:disabled) {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.servings-control__button:active:not(:disabled) {
+  transform: scale(0.9);
+}
+
+.servings-control__button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.servings-control__value {
+  min-width: 100px;
+  text-align: center;
+  font-size: 15px;
+}

@@ -1,0 +1,46 @@
+.ingredient-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ingredient-list__item {
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.ingredient-list__item:last-child {
+  border-bottom: 0;
+}
+
+.ingredient-list__label {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 2px;
+  cursor: pointer;
+}
+
+.ingredient-list__checkbox {
+  accent-color: var(--color-herb);
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  transform: translateY(2px);
+}
+
+.ingredient-list__name {
+  flex: 1;
+  transition: color 0.2s;
+}
+
+.ingredient-list__amount {
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--color-accent-dark);
+}
+
+.ingredient-list__item--checked .ingredient-list__name,
+.ingredient-list__item--checked .ingredient-list__amount {
+  color: var(--color-muted);
+  text-decoration: line-through;
+}

@@ -1,0 +1,25 @@
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
+  transition: opacity 0.2s;
+}
+
+.recipe-grid--refreshing {
+  opacity: 0.6;
+}
+
+.recipe-grid__skeleton {
+  height: 330px;
+  border-radius: var(--radius-m);
+  background: linear-gradient(90deg, #f1e8dc 0px, #f9f3eb 120px, #f1e8dc 240px);
+  background-size: 800px 100%;
+  animation: shimmer 1.3s linear infinite;
+}
+
+@media (max-width: 600px) {
+  .recipe-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

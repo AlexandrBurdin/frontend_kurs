@@ -1,0 +1,81 @@
+.shopping-list {
+  margin: 0;
+  padding: 8px 20px;
+  list-style: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-l);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-s);
+}
+
+.shopping-list__item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'label remove'
+    'recipes remove';
+  align-items: center;
+  column-gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--color-border);
+  animation: fade-in-up 0.25s var(--ease);
+}
+
+.shopping-list__item:last-child {
+  border-bottom: 0;
+}
+
+.shopping-list__label {
+  grid-area: label;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.shopping-list__checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-herb);
+}
+
+.shopping-list__name {
+  flex: 1;
+  font-weight: 600;
+}
+
+.shopping-list__amount {
+  color: var(--color-accent-dark);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.shopping-list__recipes {
+  grid-area: recipes;
+  padding-left: 32px;
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.shopping-list__remove {
+  grid-area: remove;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-muted);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.shopping-list__remove:hover {
+  background: #fdeceb;
+  color: var(--color-danger);
+}
+
+.shopping-list__item--checked .shopping-list__name,
+.shopping-list__item--checked .shopping-list__amount {
+  color: var(--color-muted);
+  text-decoration: line-through;
+}

@@ -1,0 +1,74 @@
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.step-list__button {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  padding: 16px 18px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-m);
+  background: var(--color-surface);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.25s,
+    background-color 0.25s,
+    transform 0.25s var(--ease);
+}
+
+.step-list__button:hover {
+  transform: translateX(4px);
+}
+
+.step-list__number {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-surface-alt);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  transition:
+    background-color 0.25s,
+    color 0.25s,
+    transform 0.3s var(--ease);
+}
+
+.step-list__text {
+  padding-top: 5px;
+}
+
+.step-list__item--current .step-list__button {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-accent-soft);
+}
+
+.step-list__item--current .step-list__number {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.step-list__item--done .step-list__button {
+  background: var(--color-herb-soft);
+  border-color: transparent;
+}
+
+.step-list__item--done .step-list__number {
+  background: var(--color-herb);
+  color: #fff;
+  transform: rotate(360deg);
+}
+
+.step-list__item--done .step-list__text {
+  color: var(--color-muted);
+}

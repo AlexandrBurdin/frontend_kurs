@@ -1,0 +1,40 @@
+.import-page__form {
+  display: flex;
+  gap: 10px;
+  max-width: 640px;
+}
+
+.import-page__input {
+  flex: 1;
+  border-radius: 999px;
+  padding: 12px 18px;
+}
+
+.import-page__suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 28px;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.import-page__suggestion {
+  padding: 4px 12px;
+  border: 1px dashed var(--color-accent);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-accent-dark);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.import-page__suggestion:hover {
+  background: var(--color-accent-soft);
+}
+
+.import-page__count {
+  margin: 0 0 16px;
+  color: var(--color-muted);
+}

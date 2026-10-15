@@ -1,0 +1,32 @@
+/* Дизайн-токены приложения: цвета, типографика, отступы, тени */
+:root {
+  --color-bg: #fbf6ef;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f4ece1;
+  --color-text: #2b2118;
+  --color-muted: #7a6b5d;
+  --color-border: #eadfd2;
+  --color-accent: #c8502a;
+  --color-accent-dark: #a33f1f;
+  --color-accent-soft: #fbe3d8;
+  --color-herb: #4f7a45;
+  --color-herb-soft: #e3eedc;
+  --color-gold: #d99a2b;
+  --color-danger: #b3261e;
+
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --radius-s: 8px;
+  --radius-m: 14px;
+  --radius-l: 22px;
+
+  --shadow-s: 0 1px 2px rgba(43, 33, 24, 0.06), 0 2px 6px rgba(43, 33, 24, 0.05);
+  --shadow-m: 0 6px 18px rgba(43, 33, 24, 0.1);
+  --shadow-l: 0 18px 40px rgba(43, 33, 24, 0.16);
+
+  --gap: 16px;
+  --container: 1180px;
+  --header-h: 68px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
